@@ -1,9 +1,11 @@
 ﻿(function () {
     'use strict';
 
-    angular.module.(APPNAME)
+    angular.module(APPNAME)
         .factory('BikerLocationFactory', BikerLocationFactory);
+
     BikerLocationFactory.$inject = ['$q', '$http'];
+
     function BikerLocationFactory($q, $http) {
 
         /////// Available services TOC ///////

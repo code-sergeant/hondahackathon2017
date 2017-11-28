@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.2.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.2.0\build\Microsoft.Net.Compilers.props')" />
@@ -235,6 +235,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Content Include="app\admin\app.admin.js" />
+    <Content Include="app\admin\index.html" />
+    <Content Include="app\admin\modules\routes\app.routes.js" />
+    <Content Include="app\public\app.public.js" />
+    <Content Include="app\public\index.html" />
+    <Content Include="app\public\modules\routes\app.routes.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -243,6 +249,12 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\Images\hamburger-menu.png" />
+    <Content Include="Content\Images\little-bike.png" />
+    <Content Include="Content\Images\safelane-logo.png" />
+    <Content Include="Content\Images\SafeLaneLogo.svg" />
+    <Content Include="Content\index.css" />
+    <Content Include="Content\index.html" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
@@ -257,8 +269,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\app\components\main-content\mainContentController.js" />
+    <Content Include="Scripts\app\components\navbar-component\navbarController.js" />
+    <Content Include="Scripts\app\services\bikerLocationService.js" />
+    <Content Include="Scripts\app\services\carDataService.js" />
+    <Content Include="Scripts\app\services\cycleDataService.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\index.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />

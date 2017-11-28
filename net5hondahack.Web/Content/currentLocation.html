@@ -17,6 +17,7 @@
             padding: 0;
         }
     </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div id="map"></div>
@@ -33,6 +34,7 @@
             var map, infoWindow;
             window.initMap = initMap;
             function initMap() {
+                console.log("hello",document.getElementById('map'));
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: savedposition,
                     zoom: 16
@@ -40,7 +42,29 @@
                 infoWindow = new google.maps.InfoWindow;
                 // Try HTML5 geolocation.
                 if (navigator.geolocation) {
+                    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+                    var icons = {
+                        library: {
+                            icon: iconBase + 'library_maps.png'
+                        }
+                    };
+
+                    var features = [
+                        {
+                            position: new google.maps.LatLng(34.0409236, -118.2686375),
+                            type: 'library'
+                        }]
+
+                    features.forEach(function (feature) {
+                        var marker = new google.maps.Marker({
+                            position: feature.position,
+                            icon: icons[feature.type].icon,
+                            map: map
+                        });
+                    });
+                
                     var offset = 0;
+                    var count = 0;
                     function movingBiker() {
                         setTimeout(function () {
                             navigator.geolocation.getCurrentPosition(function (position) {
@@ -48,19 +72,31 @@
                                     lat: position.coords.latitude + offset,
                                     lng: position.coords.longitude + offset
                                 };
+                                savedpositionCar = {
+                                    lat: position.coords.latitude - offset,
+                                    lng: position.coords.longitude - offset
+                                };
                                 offset += .0001
+                                count += 1;
                                 console.log(savedposition);
                                 var bikeLayer = new google.maps.BicyclingLayer();
                                 bikeLayer.setMap(map);
                                 infoWindow.setPosition(savedposition);
-                                infoWindow.setContent('Cyclist in Proximity.');
-                                infoWindow.open(map);
+                                //infoWindow.setPosition(savedpositionCar);
+                                infoWindow.setContent('<i class="material-icons" style="font-size:48px;color:red">&#xe52f;</i>');
+                                
                                 map.setCenter(savedposition);
-                                movingBiker();
+                                if (count > 10) {
+                                    infoWindow.close();
+                                } else {
+                                    infoWindow.open(map);
+                                }
+
+                                    movingBiker();
                             }, function () {
                                 handleLocationError(true, infoWindow, map.getCenter());
                             });
-                        }, 3000)   
+                        }, 3000)
                     }
                     movingBiker();
                 } else {

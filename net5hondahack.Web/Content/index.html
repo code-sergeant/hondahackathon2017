@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <title>SafeLane</title>
 </head>
@@ -19,13 +19,15 @@
             <img class="hamburger-menu" src="Images/hamburger-menu.png" alt="hamburger-menu">
         </div>
     </nav>
+    <div ng-controller="MainContentController as main">
         <div class="main-content">
-            <iframe class="map-area box-shadow center"  height="200" frameborder="0" align="middle" style="border:0" src="https://www.google.com/maps/embed/v1/place?key= AIzaSyDneA0u8UVJqAr-xsSbeYS_CZwOtoA66fA &q=Space+Needle,LosAngeles+CA">
+            <iframe class="map-area box-shadow center" height="200" frameborder="0" align="middle" style="border:0" src="https://www.google.com/maps/embed/v1/place?key= AIzaSyDneA0u8UVJqAr-xsSbeYS_CZwOtoA66fA &q=Space+Needle,LosAngeles+CA">
             </iframe>
-           
         </div>
         <div class="broadcast-button box-shadow"> Broadcast Position
-            </div>
+        </div>
+    </div>
+
     <script src="../Scripts/jquery-3.1.1.js"></script>
     <script src="../Scripts/angular.js"></script>
 

@@ -245,6 +245,7 @@
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\currentLocation.html" />
     <Content Include="Content\googleMap.html" />
     <Content Include="Content\index.html" />
     <Content Include="Content\Site.css" />
@@ -260,6 +261,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\app\components\main-content\mainContentController.js" />
+    <Content Include="Scripts\app\components\navbar-component\navbarController.js" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -328,7 +331,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\app\components\" />
     <Folder Include="Views\JsBuilder\" />
   </ItemGroup>
   <ItemGroup>

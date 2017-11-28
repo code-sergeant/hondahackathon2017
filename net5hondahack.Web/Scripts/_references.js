@@ -1,5 +1,5 @@
-﻿/// <reference path="jquery-3.2.1.js" />
-/// <reference path="modernizr-2.6.2.js" />
+﻿/// <reference path="modernizr-2.8.3.js" />
+/// <reference path="jquery-3.2.1.js" />
 /// <autosync enabled="true" />
 /// <reference path="angular.min.js" />
 /// <reference path="angular-mocks.js" />

@@ -13,20 +13,23 @@
             getBikerLoc: _getBikerLoc,
             postBikerLoc: _postBikerLoc,
             updateBikerLoc: _updateBikerLoc
-        }
+        };
+
         return service;
 
         /////// Implementation details ///////
         function _getBikerLoc() {
             $http.post()
                 .then();
-        }
+        };
+
         function _postBikerLoc() {
             $http.post()
                 .then();
-        } 
+        };
+
         function _updateBikerLoc() {
-            
-        }
+
+        };
     }
 })();

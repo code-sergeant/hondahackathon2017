@@ -9,10 +9,8 @@
     function BikerLocationFactory($q, $http, CycleDataService, CarDataService) {
         const svc = this;
 
-
         svc.cycleLocations = CycleDataService.cycleLocations;
         svc.getCycleLocation = _getCycleLocation;
-
 
         function _getCycleLocation() {
             navigator.geolocation.getCurrentPosition(position => {
@@ -20,7 +18,6 @@
                     latitude: position.coords.latitude,
                     longitude: position.coords.longitude
                 };
-
                 svc.cycleLocations.push(location);
             });
         }

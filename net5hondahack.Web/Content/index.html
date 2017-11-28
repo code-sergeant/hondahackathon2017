@@ -1,17 +1,34 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
-    <title></title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet"> 
+    <link rel="stylesheet" href="index.css">
+    <title>SafeLane</title>
 </head>
+
 <body>
-
-
-    <ui-view></ui-view>
-
+    <nav ng-controller="NavbarController as nav" class="top-navbar box-shadow">
+        <div>
+            <img class="logo" src="Images/safelane-logo.png" alt="SafeLane Logo">
+        </div>
+        <div>
+            <a ng-click="nav.toggleSidebar()"></a>
+            <img class="hamburger-menu" src="Images/hamburger-menu.png" alt="hamburger-menu">
+        </div>
+    </nav>
+        <div class="main-content">
+            <iframe class="map-area box-shadow center"  height="200" frameborder="0" align="middle" style="border:0" src="https://www.google.com/maps/embed/v1/place?key= AIzaSyDneA0u8UVJqAr-xsSbeYS_CZwOtoA66fA &q=Space+Needle,LosAngeles+CA">
+            </iframe>
+           
+        </div>
+        <div class="broadcast-button box-shadow"> Broadcast Position
+            </div>
     <script src="../Scripts/jquery-3.1.1.js"></script>
     <script src="../Scripts/angular.js"></script>
-    <script src="../Scripts/angular-ui-router.js"></script>
+
 </body>
+
 </html>

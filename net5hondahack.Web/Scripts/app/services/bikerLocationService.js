@@ -15,15 +15,16 @@
 
 
         function _getCycleLocation() {
+
             // get the cyclist's location and update it; return a unique identifier for that cyclist
-            const cycleId = navigator.geolocation.watchPosition(position => {
+            const cyclistId = navigator.geolocation.watchPosition(position => {
                 const location = {
                     latitude: position.coords.latitude,
                     longitude: position.coords.longitude
                 };
                 svc.cycleLocations.push(location);
 
-                return cycleId;
+                return cyclistId;
             });
         }
     }
